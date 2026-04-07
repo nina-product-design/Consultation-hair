@@ -1,0 +1,196 @@
+/*
+ * Design token CSS custom properties
+ * Source: Figma — Design System Foundations
+ */
+
+/* Saol Text — Headings */
+@font-face { font-family: "Saol"; src: url("https://cdn2.prose.com/build/client/fonts/saol-text-light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+
+/* Simplon Norm — Body */
+@font-face { font-family: "Simplon Norm"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonNorm-Light-WebS.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Simplon Norm"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonNorm-Regular-WebS.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Simplon Norm"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonNorm-Medium-WebS.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Simplon Norm"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonNorm-Bold-WebS.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* Simplon Mono — Labels */
+@font-face { font-family: "Simplon Mono"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonMono-Regular-WebS.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Simplon Mono"; src: url("https://cdn2.prose.com/build/client/fonts/SimplonMono-Medium-WebS.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+
+@layer base {
+  :root {
+    /* ── color/primary ─────────────────────────────────────── */
+    --color-primary-100: #dce0d2;
+    --color-primary-200: #b9c2a6;
+    --color-primary-300: #4d523c;
+    --color-primary-400: #323429;
+
+    /* ── color/neutral ─────────────────────────────────────── */
+    --color-neutral-100: #ffffff;
+    --color-neutral-200: #f9f7f2;
+    --color-neutral-300: #f1ece0;
+    --color-neutral-400: #e2d9c2;
+    --color-neutral-500: #c8bfa8;
+    --color-neutral-600: #eaeaea;
+    --color-neutral-700: #a6a6a6;
+    --color-neutral-800: #6c6c6c;
+    --color-neutral-900: #161714;
+
+    /* ── color/accent ──────────────────────────────────────── */
+    --color-accent-100: #fcded3;
+    --color-accent-200: #f69371;
+    --color-accent-300: #c5765a;
+
+    /* ── color/highlight ───────────────────────────────────── */
+    --color-highlight-100: #f6ffcd;
+    --color-highlight-200: #ecff92;
+
+    /* ── color/secondary ───────────────────────────────────── */
+    --color-secondary-100: #d0e2e8;
+    --color-secondary-200: #a2c6d1;
+    --color-secondary-300: #88acb7;
+
+    /* ── color/tertiary ────────────────────────────────────── */
+    --color-tertiary-100: #f9f9fe;
+    --color-tertiary-200: #ead7f3;
+    --color-tertiary-300: #bbacc2;
+
+    /* ── color/error ───────────────────────────────────────── */
+    --color-error-100: #e8cac6;
+    --color-error-200: #b45446;
+
+    /* ── color/success ─────────────────────────────────────── */
+    --color-success-100: #bed9c7;
+    --color-success-200: #2e844a;
+
+    /* ── radius ────────────────────────────────────────────── */
+    --radius-radius-0: 0px;
+    --radius-radius-4: 4px;
+    --radius-radius-10: 10px;
+    --radius-radius-12: 12px;
+    --radius-radius-20: 20px;
+    --radius-radius-60: 60px;
+    --radius-radius-400: 400px;
+
+    /* ── spacing ───────────────────────────────────────────── */
+    --spacing-spacing-none: 0px;
+    --spacing-spacing-4: 4px;
+    --spacing-spacing-8: 8px;
+    --spacing-spacing-12: 12px;
+    --spacing-spacing-16: 16px;
+    --spacing-spacing-24: 24px;
+    --spacing-spacing-32: 32px;
+    --spacing-spacing-48: 48px;
+    --spacing-spacing-64: 64px;
+    --spacing-spacing-80: 80px;
+
+    /* ── typography primitives ─────────────────────────────── */
+    --font-family-title: "Saol", serif;
+    --font-family-body: "Simplon Norm", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-label: "Simplon Mono", monospace;
+
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+
+    /* ── typography styles — headings (Saol, weight 300) ───── */
+    --font-heading-h1-family: var(--font-family-title);
+    --font-heading-h1-size: 48px;
+    --font-heading-h1-weight: 300;
+    --font-heading-h1-line-height: 1.1;
+    --font-heading-h1-letter-spacing: 0px;
+
+    --font-heading-h2-family: var(--font-family-title);
+    --font-heading-h2-size: 40px;
+    --font-heading-h2-weight: 300;
+    --font-heading-h2-line-height: 1.1;
+    --font-heading-h2-letter-spacing: 0px;
+
+    --font-heading-h3-family: var(--font-family-title);
+    --font-heading-h3-size: 32px;
+    --font-heading-h3-weight: 300;
+    --font-heading-h3-line-height: 1.1;
+    --font-heading-h3-letter-spacing: 0px;
+
+    --font-heading-h4-family: var(--font-family-title);
+    --font-heading-h4-size: 24px;
+    --font-heading-h4-weight: 300;
+    --font-heading-h4-line-height: 1.1;
+    --font-heading-h4-letter-spacing: 0px;
+
+    --font-heading-h5-family: var(--font-family-title);
+    --font-heading-h5-size: 20px;
+    --font-heading-h5-weight: 300;
+    --font-heading-h5-line-height: 1.2;
+    --font-heading-h5-letter-spacing: 0px;
+
+    --font-heading-h6-family: var(--font-family-title);
+    --font-heading-h6-size: 16px;
+    --font-heading-h6-weight: 300;
+    --font-heading-h6-line-height: 1.2;
+    --font-heading-h6-letter-spacing: 0px;
+
+    /* ── typography styles — body (Simplon Norm) ───────────── */
+    --font-body-1-family: var(--font-family-body);
+    --font-body-1-size: 24px;
+    --font-body-1-line-height: 1.5;
+    --font-body-1-letter-spacing: 0px;
+    --font-body-1-weight-regular: 400;
+    --font-body-1-weight-medium: 500;
+
+    --font-body-2-family: var(--font-family-body);
+    --font-body-2-size: 20px;
+    --font-body-2-line-height: 1.5;
+    --font-body-2-letter-spacing: 0px;
+    --font-body-2-weight-regular: 400;
+    --font-body-2-weight-medium: 500;
+
+    --font-body-3-family: var(--font-family-body);
+    --font-body-3-size: 16px;
+    --font-body-3-line-height: 1.5;
+    --font-body-3-letter-spacing: 0px;
+    --font-body-3-weight-regular: 400;
+    --font-body-3-weight-medium: 500;
+
+    --font-body-4-family: var(--font-family-body);
+    --font-body-4-size: 14px;
+    --font-body-4-line-height: 1.5;
+    --font-body-4-letter-spacing: 0px;
+    --font-body-4-weight-regular: 400;
+    --font-body-4-weight-medium: 500;
+
+    --font-body-5-family: var(--font-family-body);
+    --font-body-5-size: 12px;
+    --font-body-5-line-height: 1.5;
+    --font-body-5-letter-spacing: 0px;
+    --font-body-5-weight-regular: 400;
+    --font-body-5-weight-medium: 500;
+
+    --font-body-6-family: var(--font-family-body);
+    --font-body-6-size: 10px;
+    --font-body-6-line-height: 1.5;
+    --font-body-6-letter-spacing: 0px;
+    --font-body-6-weight-regular: 400;
+    --font-body-6-weight-medium: 500;
+
+    /* ── typography styles — labels (Simplon Mono) ─────────── */
+    --font-label-1-family: var(--font-family-label);
+    --font-label-1-size: 14px;
+    --font-label-1-line-height: 1.2;
+    --font-label-1-letter-spacing: 0px;
+    --font-label-1-weight-regular: 400;
+    --font-label-1-weight-medium: 500;
+
+    --font-label-2-family: var(--font-family-label);
+    --font-label-2-size: 12px;
+    --font-label-2-line-height: 1.2;
+    --font-label-2-letter-spacing: 0.08em;
+    --font-label-2-weight-regular: 400;
+    --font-label-2-weight-medium: 500;
+
+    --font-label-3-family: var(--font-family-label);
+    --font-label-3-size: 10px;
+    --font-label-3-line-height: 1.2;
+    --font-label-3-letter-spacing: 0px;
+    --font-label-3-weight-regular: 400;
+  }
+}

@@ -1,0 +1,828 @@
+,Logic,Question Route,Heap question name,Question_slug,,Headline/question,Instruction,Answers,Value Type/Branch,Answer_slug,tip tab title,tip tab format,prose tip /caption,footer,"Impact of the question/answers on the algos
+(Formu, Reformu, Reco algos)",
+All,,intro,HC/SC Consultation Intro - View,,,We're excited to get started on your consultation.,"We'll ask a brief series of questions to understand your unique hair needs and goals, lifestyle, and environment so we can formulate your custom products and provide your recommended routine. 
+
+If you'd like to give the gift of Prose, please visit our gift page.",n/a,,n/a,,,,Consultation type,,
+HC,,my-hair/length,C3 HC Length - View,length,How long is your hair?,How long is your hair?,"if you have curly hair, pull the curl all the way down to find your true length.","Short 
+Buzz-cut to early-Beatles
+
+Chin-length
+Doesn’t touch shoulders 
+
+Shoulder length
+Sits on shoulders or falls slightly past
+
+Long
+Below shoulder blades to mid-back
+
+Very long
+Mid-back and beyond",Single,,More of a visual learner? Tap for pics,text + carousel of pictures,"If you are stuck between 2 lengths, choose the longer one.
+
++
+
+[Hair length photo carousel]",Hair & Scalp,high,"If you are stuck between 2 lengths, choose the longer one.
+
++
+
+[Hair length photo carousel]"
+HC,,my-hair/texture,C2 HC Texture - View,texture,"What’s your natural, untreated, air-dried hair texture?","What’s your natural, untreated, air-dried hair texture?","If your hair is texturally treated, think back to when it wasn’t. ","Type 1 -  Straight
+
+Type 2A - Soft Waves
+Almost straight with a slight bend
+
+Type 2B - Wavy
+Loose, S-shaped waves
+
+Type 2C - Deep Waves or Loose Curls
+Defined, S-shaped pattern
+
+Type 3A - Curly 
+Like a loose ""C""
+
+Type 3B - Very Curly
+Defined & springy C’s
+
+Type 3C - Tight Curls
+Like a corkscrew
+
+Type 4A- Coily
+Tight & springy, like a slinky
+
+Type 4B  - Zig-Zag Coils
+Like a sharply defined ""Z""
+
+Type 4C - Tight Zig-Zag
+A less-defined ""Z""",Single,"type_1
+
+type_2a
+
+type_2b
+
+type_2c
+
+type_3a
+
+type_3b
+
+type_3c
+
+very_curly
+
+frizzy
+
+zigzag",More of a visual learner? Tap for pics,text text + table of pictures (including carousel for types 3 and 4),"Sometimes it’s tough to decide, and many people have more than 1 texture on their heads. When in doubt, pick the texture that looks like the majority of your hair, the majority of the time.
+
++
+
+[picture gallery grid]",Hair & Scalp,high,"Sometimes it’s tough to decide, and many people have more than 1 texture on their heads. When in doubt, pick the texture that looks like the majority of your hair, the majority of the time.
+
++
+
+[picture gallery grid]"
+HC,,my-hair/type,C4 HC Type - View,type,Where would you put your hair on the oily/dry spectrum?,Where would you put your hair on the oily/dry spectrum?,/,"On the oily side
+Roots get greasy, while lengths are balanced
+
+Happy medium
+Roots don't get oily quickly, and lengths aren't dry either
+
+Mixed
+Roots get oily quickly while my lengths are dry or frizzy
+
+On the dry side
+Roots don't get oily quickly and my lengths are always dry of frizzy",Single,,Why we ask,text,"We know oiliness and dryness levels can vary throughout the year, so just answer with what you're feeling at this exact moment. We'll track the conditions in your area throughout the year and subtly adjust your formulas to anticipate the way your hair changes with the seasons. ",Hair & Scalp,high,"We know oiliness and dryness levels can vary throughout the year, so just answer with what you're feeling at this exact moment. We'll track the conditions in your area throughout the year and subtly adjust your formulas to anticipate the way your hair changes with the seasons. "
+HC,,my-hair/split-ends,C3.1 HC Split Ends - View,split-ends,Do you get split ends? ,Do you get split ends? ,"Check your ends right now—do you see any fiber divisions, white specks, or tiny knots?","Yes, plenty
+
+Only a few
+
+None in sight","Single;
+Branches from [c3 length]; branch values = 'chin length', 'shoulder lenght', 'long', 'very long'",,Did you know there are 6 types of splits?,text + carousel of pictures,"No haircare can make your ends grow back together, but we can prevent more happening in future. In the meantime, we recommend a trim.
+
+[carousel of types of split ends]",Hair & Scalp,very low,"No haircare can make your ends grow back together, but we can prevent more happening in future. In the meantime, we recommend a trim.
+
+[carousel of types of split ends]"
+HC,type 3 or 4,my-hair/porosity,C2.1 HC Porosity - View,porosity,How porous is your hair?,How porous is your hair?,High-porosity hair dries quickly and is frizz-prone; products are absorbed quickly. Low porosity hair dries slowly and products stick around.,"High porosity - dries quickly
+
+Medium or not sure
+
+Low porosity - dries slowly","Single;
+Branches from [c4 texture]; branch values = any type 3 or type 4",,At home? Tap for an experiment,text,"Damage from the environment or from treatments like bleach or straightening increases porosity, so even though your hair is thirsty, it has a hard time retaining moisturizing products. We’ll fine-tune your formulas to give your hair nutrients it can actually absorb.
+
+To test your porosity in a weird but effective way, pull out a hair and put it in a glass of water.
+
+If it…
+-stays on the surface = low porosity 
+- floats in the middle = medium porosity
+- sinks at the bottom = high porosity",Hair & Scalp,very low,"Damage from the environment or from treatments like bleach or straightening increases porosity, so even though your hair is thirsty, it has a hard time retaining moisturizing products. We’ll fine-tune your formulas to give your hair nutrients it can actually absorb.
+
+To test your porosity in a weird but effective way, pull out a hair and put it in a glass of water.
+
+If it…
+-stays on the surface = low porosity 
+- floats in the middle = medium porosity
+- sinks at the bottom = high porosity"
+HC,,my-hair/thickness,C5 HC Thickness - View,thickness,What does a single strand of hair feel like?,What does a single strand of hair feel like?,Roll a single hair between your fingers. If you…,"Barely feel it = fine/thin hair 
+
+Not sure or feel it slightly = medium hair
+
+Feels like sewing thread = thick/coarse hair",Single,,Why we ask,text,"This info about individual hair thickness is crucial to supporting overall strength and addressing frizz and flyaways. 
+
+",Hair & Scalp,high,"This info about individual hair thickness is crucial to supporting overall strength and addressing frizz and flyaways. 
+
+"
+HC,,my-hair/density,C6 HC Density - View,density,How dense is your hair?,How dense is your hair?,"Part your hair and check the mirror—the more scalp you see, the less dense your hair is.","Very dense
+I see very little to no scalp
+
+Medium or not sure
+I can see a little skin
+
+Low density
+I have a wide part
+",Single,,Why we ask,text + video,"Density (how many hairs you have) and thickness (how thick a single strand is) aren’t the same thing, but the two have an important correlation—we’ll use this info to help manage your volume the way you want it.
+
+
+[Video to show how to evaluate the density.]",Hair & Scalp,medium,"Density (how many hairs you have) and thickness (how thick a single strand is) aren’t the same thing, but the two have an important correlation—we’ll use this info to help manage your volume the way you want it.
+
+
+[Video to show how to evaluate the density.]"
+HC,,my-hair/hairloss,C7 HC Hair Loss - View,hairloss,Do you feel like you’re shedding more than usual lately?,Do you feel like you’re shedding more than usual lately?,\,"No, seems normal
+
+Sometimes it feels that way, sometimes not
+
+Yes, I know for sure I am
+",Single,,What's normal?,text ,"What normal looks like 
+It’s normal to lose up to 100 strands a day, but you'll typically notice the loss only when you wash or style your hair. So if, for example, you had your hair in a braid for 3 days, then washed it or brushed it out, it might look like you lost 300 hairs at once. 
+
+
+Shedding vs breakage
+Shedding means hair is falling out at the root; breakage means it is breaking off somehwere down the strand. If you're 100% sure you're shedding more lately, there could be genetic, hormonal, or environmental factors at work. We’ll do all we can to balance you out, but some forces are greater than haircare.
+
+",Hair & Scalp,high (supp),"What normal looks like 
+It’s normal to lose up to 100 strands a day, but you'll typically notice the loss only when you wash or style your hair. So if, for example, you had your hair in a braid for 3 days, then washed it or brushed it out, it might look like you lost 300 hairs at once. 
+
+
+Shedding vs breakage
+Shedding means hair is falling out at the root; breakage means it is breaking off somehwere down the strand. If you're 100% sure you're shedding more lately, there could be genetic, hormonal, or environmental factors at work. We’ll do all we can to balance you out, but some forces are greater than haircare.
+
+"
+Supp Updates,,my-hair/genetic-hair-loss,C8 HC Genetic Hair Loss - View,genetic-hair-loss,,Is hair loss a genetic issue in your family?,,"Yes 
+
+No
+
+I'm not sure",Single,,Why we ask,text ,"We see hair loss as a multi-factorial issue, and will customize your supplements to address as many of the aggravating factors in your case as possible. We can't reverse genetic-based hair loss in one fell swoop, but we can give you the best possible foundation for healthy hair.",Hair & Scalp,very low,
+HC,,my-hair/shampoo-frequency,C9 HC Shampoo Frequency - View,shampoo-frequency,How often do you wash your hair ?,How often do you wash your hair ?,This includes shampooing and co-washing.,"Every day
+
+Every 2-3 days
+
+Once a week
+
+Less than once a week",Single,,Fun fact no. 222,text ,The average shower uses 2.1 gallons of water per minute. Skipping a wash day and opting for dry shampoo a few times a week can save time and water resources.,Hair & Scalp,medium,The average shower uses 2.1 gallons of water per minute. Skipping a wash day and opting for dry shampoo a few times a week can save time and water resources.
+HC,,my-hair/oil,C10 HC Oil - View,oil,"After a wash, how long until hair gets oily again?","After a wash, how long until hair gets oily again?","If you're stuck between answers, choose the greater number of days.","The same day
+
+The second day
+
+3+ days 
+
+It never gets oily
+
+I don't know",Single,,Why we ask,text ,"Your sebum production can vary within the year, depending on elements like temperature, humidity, styling routine, diet, stress, etc. Just give the answer what’s true for you right now, and we’ll be able to adjust your formulas throughout the year according to these expected changes. The goal is less washing & more great hair days.",Hair & Scalp,high,"Your sebum production can vary within the year, depending on elements like temperature, humidity, styling routine, diet, stress, etc. Just give the answer what’s true for you right now, and we’ll be able to adjust your formulas throughout the year according to these expected changes. The goal is less washing & more great hair days."
+HC,,my-hair/scalp,,diag_scalp_type,,"In between washes, where is your scalp on the oily/dry spectrum?
+","Just like your skin, your scalp is constantly changing, but think about how it typically feels.
+","On the oily side
+
+Balanced
+
+On the dry side
+
+Not sure / I don’t know
+",Single,,Did you know,text,"Healthy hair starts with a healthy scalp, so the state of your scalp can tell us a lot about the ingredients and products that will cleanse, condition, and treat your hair to its best expression. 
+
+An oily scalp, for example, can be a sign of sebum overproduction triggered by stress or product buildup. A dry scalp, on the other hand, may indicate an imbalance caused by environmental stressors.
+
+Prose products are designed to respect the health of your scalp microbiome — the unique “microbial fingerprint” that, when balanced, provides the optimal foundation for full, healthy hair.
+",Hair & Scalp,medium (scalp serum),
+HC,,my-hair/dandruff-level,C11 HC Dandruff - View,dandruff-level,Do you see white or yellow flakes on your head or shoulders?,Do you see white or yellow flakes on your head or shoulders?,"Answer yes if flakes regularly occur, even if you’re flake-free at the moment.","No
+
+Very rarely 
+
+Sometimes  
+
+Daily ",Single,,Did you know...,text ,"Flakes come from the skin of your scalp, and can be triggered by weather, hormones, or irritating products. Build-up comes from products sitting on your scalp and accumulating over time—usually stylers like aerosol dry shampoo, hairspray, mousse, etc.
+
+If you don’t see an issue when you don’t use these products, you probably just have build-up.",Hair & Scalp,medium,"Flakes come from the skin of your scalp, and can be triggered by weather, hormones, or irritating products. Build-up comes from products sitting on your scalp and accumulating over time—usually stylers like aerosol dry shampoo, hairspray, mousse, etc.
+
+If you don’t see an issue when you don’t use these products, you probably just have build-up."
+HC,,my-hair/sensitivity,C12 HC Sensitivity - View,sensitivity,Do you have a sensitive scalp?,Do you have a sensitive scalp?,"If you experience tightness, dryness, burning, tingling, pain, itching, or redness, all that counts as sensitivity. ","Not at all 
+
+Off and on
+
+Yes, for sure
+
+It’s ridiculously sensitive",Single,,Did you know…,text ,"Some sensitivity is caused by things like chemical treatments, chlorine, or hard water, and can be significantly improved with the right haircare. Some causes are more hormonal or medical, and require lifestyle changes or medication, but our custom formulas can still give you partial relief in the meantime. If you’re at all sensitive, choose our fragrance-free option at the end of this quiz.
+
+PS: If you’ve been diagnosed with eczema or allergic contact dermatitis,  please answer with the highest level of sensitivity
+",Hair & Scalp,medium,"Some sensitivity is caused by things like chemical treatments, chlorine, or hard water, and can be significantly improved with the right haircare. Some causes are more hormonal or medical, and require lifestyle changes or medication, but our custom formulas can still give you partial relief in the meantime. If you’re at all sensitive, choose our fragrance-free option at the end of this quiz.
+
+PS: If you’ve been diagnosed with eczema or allergic contact dermatitis,  please answer with the highest level of sensitivity
+"
+HC,,my-hair/gray,C13 HC Gray Hair - View,gray,How much of your hair is gray?,How much of your hair is gray?,"If your hair is color-treated, answer with your natural gray percentage.","70-100%
+
+40-60%
+
+10-30%
+
+None",Single,,More of a visual learner? Tap for pics,pictures stacked on top of each other,[comparrison photos],Hair & Scalp,low,[comparrison photos]
+HC,,,C14 HC Treatments Intro - View,,,,,,,,,,,,,
+HC,,my-treatments/color,C15 HC Color - View,color,How much of your hair is color-treated?,Is your hair color-treated?,"If any part of your hair has been lightened or darkened from your natural color, answer yes.","Yes
+My hair is colored or lightened
+
+No
+Currently my hair color is 100% natural ",Single,,Fun fact no. 99,text,"Half of the women in the United States color their hair regularly, and two-thirds have tried it at least once. So either way, you're definitely not alone. ",Treatment ,high,"If you've recently stopped dyeing your hair but still have color-treated lengths, consider answering with one of these answers; so we can give your hair what it needs."
+HC,"If my-treatments/color = 
+Yes",my-treatments/color-treatments-location,C15.1 HC Color Location - View,color-treatments-location,What kind of color do you get?,How much of your hair is color-treated?,"If you’re not sure, select all that apply.","All or nearly all
+        Choose all even if you have small visible roots
+
+Only parts
+I.e. ombre, balayage, highlights
+
+Just the tips
+Nearly grown-out ends",Single: branches from [C15] values = 'Yes',,why we ask ,text ,"If you've recently stopped dyeing your hair but still have color-treated lengths, consider answering with one of these answers; so we can give your hair what it needs.",Treatment ,very low,"Certain types of color can lead to damage, dryness, and even breakage, Knowing what kind of color you get tells us what level of repair and protection you hair needs.
+
+Bleach is used to dramatically lighten your natural hair color, whether in part or in full. A lightning spray like Sun-In also counts.
+
+Permanent color is used to permanently cover your natural hair color. It offers 100% gray coverage, and is almost always used to darken hair, but some variants can slightly lighten it too.
+
+Temporary color is used to slightly change hair color, cover early grays, or neutralize brassy shades after bleaching. These can include gloss, glaze, toner, color-depositing haircare (like masks or conditioners), henna, or other semi-permanent options. These typically wash out in 1-5 washes.
+
+Other refers to henna rinses or paint-on hair makeup that washes out quickly, like colored chalks, waxes, etc."
+HC,If Full head or roots,my-treatments/color-treatments-type,C15.2 HC Color Type - View,color-treatments-type,How often do you color-treat your hair? ,What kind of color do you get?,This helps us prevent and treat specific kinds of color-related damage. Select all that apply.,"Bleach
+Your hair got lighter, e.g. ombre, balayage, highlights, double process
+
+Permanent color 
+Your hair either got darker, or slightly lighter e.g. grey coverage, lowlights, all-over color
+
+Temporary color
+Your hair got toned or glossed, then eventually washed out
+
+Other 
+You used henna powder or hair-makeup that washes out","Multi-select: 
+branches from [c15.1] values = any value",,Not sure what you got?,text ,"Certain types of color can lead to damage, dryness, and even breakage, Knowing what kind of color you get tells us what level of repair and protection you hair needs.
+
+Bleach is used to dramatically lighten your natural hair color, whether in part or in full. A lightning spray like Sun-In also counts.
+
+Permanent color is used to permanently cover your natural hair color. It offers 100% gray coverage, and is almost always used to darken hair, but some variants can slightly lighten it too.
+
+Temporary color is used to slightly change hair color, cover early grays, or neutralize brassy shades after bleaching. These can include gloss, glaze, toner, color-depositing haircare (like masks or conditioners), henna, or other semi-permanent options. These typically wash out in 1-5 washes.
+
+Other refers to henna rinses or paint-on hair makeup that washes out quickly, like colored chalks, waxes, etc.",Treatment ,medium,"Bleach & permanent color cause the most damage to hair, especially with frequent treatments. Temporary color is nearly damage-free and doesn’t factor as much here."
+HC,If permanent and/or bleach,my-treatments/color-treatments-cadence,C15.3 HC Color Cadence - View,color-treatments-cadence,Has your hair undergone any textural treatments?,How often do you color-treat your hair? ,"We’re more interested in bleach & permanent color here, not the temporary stuff.","Every month 
+
+Every 2 or 3 months
+ 
+A couple times a year
+
+I just started","Single; 
+branches from [C15.2] values = 'bleach' 'permanent color'",,Why we ask,,"Bleach & permanent color cause the most damage to hair, especially with frequent treatments. Temporary color is nearly damage-free and doesn’t factor as much here.",Treatment ,very low,"See if you remember this happening.
+A relaxer comes in the form of a cream that’s applied to dry hair, rinsed, then washed out with a pH-balancing shampoo.
+
+A perm is set with rollers that come big for loose waves or small for tight curls, activated by heat.
+
+Keratin or Brazilian keratin works by combing a straightening formula through wet hair, then sealing it in with a blow-dryer and flat-iron. It gives you smoother, straighter hair that lasts 3-5 months.
+"
+HC,,my-treatments/other-treatments,C16 HC Other Treatments - View,other-treatments,How often do you receive textural treatments?,Has your hair undergone any textural treatments?,"Select all that apply, even if you’re growing one out.","Relaxer
+Curly hair became straight(er)
+
+Perm or Waving
+Straight hair became curly
+
+Keratin
+Hair was smoothed & straightened for 3-5 months
+
+None of the above","Multi-select: 
+(any combo or none of the above)
+",,Not sure what you got?,text,"See if you remember this happening.
+A relaxer comes in the form of a cream that’s applied to dry hair, rinsed, then washed out with a pH-balancing shampoo.
+
+A perm is set with rollers that come big for loose waves or small for tight curls, activated by heat.
+
+Keratin or Brazilian keratin works by combing a straightening formula through wet hair, then sealing it in with a blow-dryer and flat-iron. It gives you smoother, straighter hair that lasts 3-5 months.
+",Treatment ,medium,"Since these treatments are more prone to causing damage, we need to know how often you’re exposed to them so we can give you the right level or reparative support. "
+HC,if Perm or Relaxers ,my-treatments/other-treatments-cadence,C16.1 HC Other Treatments Cadence - View,other-treatments-cadence,What do you use to style your hair?,How often do you receive textural treatments?,"If you've stopped getting regular treatments, answer with your former frequency.","Every month 
+
+Every 2 or 3 months
+ 
+A couple times a year
+
+I just started","Single:
+branches from [C16] value = 'relaxer', 'perm'",,Why we ask,text,"Since these treatments are more prone to causing damage, we need to know how often you’re exposed to them so we can give you the right level or reparative support. ",Treatment ,very low,"This tells us what level of heat protection you need on a daily basis, and how much build-up your shampoo needs to sweep clean every wash.
+"
+HC,,my-treatments/styles,"external_factor_styles
+
+
+
+
+
+
+
+
+
+",styles,How often do you curl or flat-iron your hair?,What products and styling tools do you use?,"Select all that apply, even the ones you use infrequently.","CLEAN & CONDITION 
+Shampoo
+Conditioner
+Leave-in conditioner
+STYLING PRODUCTS AND TOOLS
+Straightening iron
+Curling iron / wand
+Blow dryer
+Hairspray
+Curl Cream
+Paste / Pomade
+Mousse
+Gel / Jelly
+Dry Shampoo
+Hair Oil
+TREATMENTS
+Scalp Mask
+Hair Mask
+Scalp Serum
+Hair Butter
+Hair Vitamins & Supplements","Multi combination - everyone sees the same options. 
+Range from All selected to none selected",,Why we ask,text,"This tells us what level of heat protection you need, how much build-up you might be experiencing, and helps us create a personalized routine that factors in your styling and product preferences.",Treatment ,high (reco),"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage."
+HC,If Flat Iron or Curling Iron,my-treatments/styles-cadence,C17.1 HC Styles Cadence - View,styles-cadence,Do you wear any of these styles ? ,How often do you curl or flat-iron your hair?,,"Everyday or every other day
+
+Once or twice a week
+
+Only on special occasions","Single: branches from [external factors] values = 'straightening iron', 'curling iron' (at least 1 of these). ",,Why we ask,,"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage.",Treatment ,medium,"Natural or synthetic extensions are hair pieces that can be clipped in, taped in, sewn in, or woven in to make hair appear longer or fuller
+
+Wigs can be full-head or partially-open hair units. 
+
+Protective styles can be done with your own hair or with synthetic braiding hair and are installed for a couple weeks to avoid manipulation and protect hair
+
+Locs is a hairstyle in which strands of hair are tangled together forming individual rope-like locks of hair. 
+
+"
+HC,if hair_texture =  type 1 or Relaxer or Perms+Relaxers,my-treatments/hairstyles,C18 HC Hairstyles - View,hairstyles,How often do you curl or flat-iron your hair?,Do you wear any of these styles ?,"Select all that apply, including any styles you plan to wear in the near future.","Crafted Curls
+Curls created with a styling tool like a curling iron or rollers  
+
+Pulled-back styles
+Buns, braids, ponytails, updos
+
+Straightened styles
+Usually created with a straightening iron
+
+Beachy or tousled waves
+For added volume and texture 
+
+Lifted roots
+Teased or raised for added volume
+
+Locs or Dreadlocks
+Ropes or strands of entangled, braided, twisted, or palm-rolled hair
+
+Finger-combed
+For added shape like swoops or spikes
+
+Extensions
+Natural or synthetic extensions
+
+Wrapped styles
+Including head wraps, turbans, scarves
+
+Wigs
+Natural or synthetic wigs
+
+I don’t wear any of these styles","Limited Audience: get this question if:
+(C16 = 'relaxer' or 'perm') -OR-
+C2 = 'Type 1'
+
+Multi-select or ""I don't wear any of these styles""","crafted_curls
+
+
+
+pulled_back_styles
+
+
+straightened_styles
+
+
+beachy_waves
+
+
+lifted_roots
+
+
+locs
+
+
+finger_combed
+
+
+extensions
+
+
+wrapped_styles
+
+
+wigs
+
+
+none",Why we ask,text,Knowing what style is in your rotation helps us asses which product and styling routine best fit your needs and expectations. ,Treatment ,medium,"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage."
+HC,if hair_texture =  type 2,my-treatments/hairstyles,C18 HC Hairstyles - View,hairstyles,How often do you curl or flat-iron your hair?,Do you wear any of these styles ?,"Select all that apply, including any styles you plan to wear in the near future.","Crafted Curls
+Curls created with a styling tool like a curling iron or rollers  
+
+Pulled-back styles
+Buns, braids, ponytails, updos
+
+Straightened styles
+Usually created with a straightening iron
+
+Beachy or tousled waves
+For added volume and texture 
+
+Lifted roots
+Teased or raised for added volume
+
+Locs or Dreadlocks
+Ropes or strands of entangled, braided, twisted, or palm-rolled hair
+
+Finger-combed
+For added shape like swoops or spikes
+
+Extensions
+Natural or synthetic extensions
+
+Wrapped styles
+Including head wraps, turbans, scarves
+
+Wigs
+Natural or synthetic wigs
+
+I don’t wear any of these styles","Limited Audience: get this question if:
+C2 = 'Type 2'
+
+Multi-select or ""I don't wear any of these styles""","natural_waves
+
+
+crafted_curls
+
+
+pulled_back_styles
+
+
+lifted_roots
+
+
+locs
+
+
+finger_combed
+
+
+streched_out_straightened
+
+
+extensions
+
+
+wrapped_styles
+
+
+wigs
+
+
+none",Why we ask,text,Knowing what style is in your rotation helps us asses which product and styling routine best fit your needs and expectations. ,Treatment ,medium,"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage."
+HC,if hair_texture =  type 3,my-treatments/hairstyles,C18 HC Hairstyles - View,hairstyles,How often do you curl or flat-iron your hair?,Do you wear any of these styles ?,"Select all that apply, including any styles, extensions or wigs you plan to wear in the near future.","Wash-n-go
+Natural curls, defined and set with products
+
+Pulled-back styles
+Buns, braids, ponytails, updos
+
+Protective styles
+Braids, twists, crochet styles
+
+Crafted patterns
+Roller and rod sets or other tools to create defined shapes
+
+Afro or combed out curls
+Hair combed up and out with no visible curl definition
+
+Locs or Dreadlocks
+Ropes or strands of entangled, braided, twisted, or palm-rolled hair
+
+Stretched out or straightened
+Created with or without heat stylers
+
+Extensions
+Natural or synthetic including braiding hair and weaves
+
+Wigs
+Natural or synthetic wigs
+
+Wrapped styles
+Including head wraps, turbans, scarves, silk wraps
+
+I don’t wear any of these styles","""Limited Audience: get this question if:
+C2 = 'Type 3""
+
+Multi-select or ""I don't wear any of these styles""","wash_n_go
+
+
+pulled_back_styles
+
+
+protective_styles
+
+
+crafted_patterns
+
+
+
+afro_combed_curls
+
+
+locs
+
+
+streched_out_straightened
+
+
+extensions
+
+
+wrapped_styles
+
+
+wigs
+
+
+none",Why we ask,text,Knowing what style is in your rotation helps us asses which product and styling routine best fit your needs,Treatment ,medium,"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage."
+HC,if hair_texture =  type 4,my-treatments/hairstyles,C18 HC Hairstyles - View,hairstyles,How often do you curl or flat-iron your hair?,Do you wear any of these styles ?,"Select all that apply, including any styles, extensions or wigs you plan to wear in the near future.","Natural coils, defined and set with products
+
+Pulled-back styles
+Buns, braids, puffs, updos
+
+Protective styles
+Braids, twists, crochet styles
+
+Crafted patterns
+Roller and rod sets or other tools to create defined shapes
+
+Afro
+Hair combed or fluffed up and out without specific coil definition
+
+Locs or Dreadlocks
+Ropes or strands of entangled, braided, twisted, or palm-rolled hair
+
+Stretched out or straightened
+Created with or without heat stylers
+
+Extensions
+Natural or synthetic including braiding hair and weaves
+
+Wigs
+Natural or synthetic wigs
+
+Wrapped styles
+Including head wraps, turbans, scarves
+
+I don’t wear any of these styles","""Limited Audience: get this question if:
+C2 = 'Type 4""
+
+Multi-select or ""I don't wear any of these styles""","wash_n_go
+
+
+pulled_back_styles
+
+
+protective_styles
+
+
+crafted_patterns
+
+
+
+afro
+
+
+locs
+
+
+streched_out_straightened
+
+
+extensions
+
+
+wrapped_styles
+
+
+wigs
+
+
+none",Why we ask,text,Knowing what style is in your rotation helps us assess which product and styling routine will best fit your needs and goals.,Treatment ,medium,"If you’re a frequent heat-styler, we’ll customize your Leave-in Conditioner to protect your hair from heat up to 450°F,  so you can curl or flat-iron every day without the damage."
+HC,For everyone except hair texture = TYPE 1,my-treatments/hold-level,C18.1 HC Hold Level - View,hold-level,What describes your ideal hair routine? ,What level of hold do you prefer when styling?,Use different levels of hold? Select the one you use the most and we’ll curate your routine to offer options based on the styles you wear.,"None
+I don’t need hold!
+
+Soft
+For minimal hold
+
+Medium*
+Next-level hold
+
+Strong*
+Our maximal hold level
+
+Not sure
+We’ll give suggestions based on your hair needs, styling habits and your environment
+
+*These product features are specific to our Styling Gel, which is always formulated for
+flexible, soft-touch styles and no crunching.","Limited Audience = where Type in [Type 2, 3 or 4]
+
+Single Select
+
+","none
+
+
+light
+
+
+medium
+
+
+strong
+
+
+not_sure
+
+
+
+
+
+
+",,,"A styling product's hold level is its strength in keeping a hairstyle in place. Hold can also be adapted to your preferences by adjusting the amount of product used. However, this tells us how much movement you expect from your styles and how long you want your look to last. ",Treatment ,medium,We'll make sure your custom routine has the number of products and steps you actually enjoy doing every day—nothing more and nothing less. 
+HC,,my-treatments/routine,C19 HC Routine Effort - View,routine,Which of these describes your diet? ,What describes your ideal hair routine? ,/,"Streamlined & minimal
+
+More than basic, but nothing fancy
+
+Long & luxurious","Everyone
+Single Select",,Why we ask,text,We'll make sure your custom routine has the number of products and steps you actually enjoy doing every day—nothing more and nothing less. ,Treatment ,very low,"What you eat literally powers your hair growth and scalp balance, and skimping out on nutrients like Vitamin B8 (biotin) can lead to brittle, weak strands or an irritated scalp. Be honest about your daily dietary habits and we'll fill in the gaps, fortifying your haircare with the nutrition in needs. "
+HC,,,C20 HC Lifestyle Intro - View,,,,,,,,,,,,,
+HC,,my-hair/age,C1 HC Age - View,age,How old are you?,How old are you?,"This helps us give the right support, at every stage.","Under 30
+In my 30s
+In my 40s
+In my 50s
+In my 60s
+70 or over","Everyone
+Single Select",,Why we ask,text ,"Over the course of a lifetime, hair goes through changes in texture, density, and strength. We’ll use this info to give you extra support at any stage.
+
+*Please note our haircare products are not intended for use by individuals under the age of 18. These products have not been specifically formulated or tested for this age group.",Profile,low,"Over the course of a lifetime, hair goes through changes in texture, density, and strength. We’ll use this info to give you extra support at any stage."
+Supp Updates,,my-lifestyle/hormones,C21 HC Hormones - View,hormones,,Are you currently...,Select all that apply,"Pregnant** 
+Post-pregnancy (delivered in the last 12 months) 
+Breastfeeding** 
+Experiencing menopause 
+None of the above 
+
+""Please check with your doctor before starting supplements""","Everyone
+Multi-select or 'None of the Above""",,Why we ask,text,"Major hormonal events can affect hair’s growth and shedding cycle. For example, delivery can induce post-partum hair shedding. ",Lifestyle & Environment,medium,
+Supp Updates,,my-lifestyle/diet,C22 HC Diet - View,diet,How often are you stressed out?,What makes up the majoritiy of your diet?,Select all that apply,"Meat
+Fish / Seafood
+Vegetables
+Fruits
+Dairy
+Processed or fast food
+Carbs / Starches
+Sweets","Everyone and must select at least 1 to move forward. 
+
+Multi-select",,Why we ask,text,"What you eat literally powers your hair growth and scalp balance, and skimping out on nutrients like Vitamin B8 (biotin) can lead to brittle, weak strands or an irritated scalp. Be honest about your daily dietary habits and we'll supplement the gaps, personnalizating your formulas depending on your needs. ",Lifestyle & Environment,low,"Emotional stress can weaken hair, so be honest about your feelings. We'll create products that give your hair the strength and resilience it needs on good days and bad."
+Supp Updates,,my-lifestyle/hydration,C23 HC Hydration - View,hydration,,How much water do you drink daily?,Choose what best reflects your typical intake.,"Less than 3 glasses
+ 4 - 6 glasses (1 liter)
+7 - 8 glasses (1.5 liters)
+More than that","Everyone
+Single Select",,Fun fact 999,text,"Fun fact: Hair is 10% water! Water is found in every layer of the hair's structure, and is essential for its strength, elasticity and damage-resistance, as well as scalp health. If you're reading this, refill your glass.",Lifestyle & Environment,very low,
+HC,,my-lifestyle/smoke-exposure,C24 HC Smoke Exposure - View,smoke-exposure,"In an average week, where do you workout?",Does your hair retain noticeable odors from food or smoke? ,/,"Never noticed 
+Yes, sometimes 
+All the time","Everyone
+Single Select",,Why we ask,text,"If your hair retains smells you don't like, replace it with a scent you do. We have an entire protfolio of fragrances developed by Parisian perfumers for you to pick from—choose one at the end of this consultation, and your hair will smell heavenly always.",Lifestyle & Environment,very low,"Sweating affects your hair a lot (as you've no doubt experienced), as does the environment that happens in. This gives us insight into both."
+HC,,my-lifestyle/stress,C25 HC Stress - View,stress,Where will you be spending most of your time in the next 2 months? ,How often are you stressed out?,/,"Rarely
+Maybe once a week
+Multiple times a week
+Every day","Everyone
+Single Select",,Why we ask,text,"Emotional stress can weaken hair, so be honest about your feelings. We'll create products that give your hair the strength and resilience it needs on good days and bad.",Lifestyle & Environment,medium,/
+Supp Updates,if hair loss = sometimes or yes,my-lifestyle/stress-intensity,C7.1 HC Stress Intensity - View,stress-intensity,Any specific ingredient preferences? ,Have you experienced any of these factors in the last 3 months?,Select all that apply,"Major stressful event
+e.g. job loss, surgery, breakup, bereavement
+
+Stopped or started a new medication
+e.g. insulin, birth control
+
+Diagnosed scalp conditions
+e.g. psoriasis, eczema
+
+Medical treatment that affects hair/scalp
+e.g. chemotherapy, thyroid treatment
+
+None of these apply to me","Branches from C7 values = 'yes' or 'sometimes'
+
+Multi-select or ""None...""",,/,text,"A sudden upsurge in hair shedding is often a physical reaction to changing conditions, and can usually be reversed. This is different from permanent hair loss, which is not as easily or even not reversible.
+
+If you're already taking medication, consult your doctor before starting any supplements.
+
+Be assured, we'll never share this data — we just want to create a routine that's truly tailored to you.",Lifestyle & Environment,medium,
+HC,,my-lifestyle/sports,C26 HC Sports - View,sports,Any specific ingredient preferences? ,"In an average week, where do you workout?","Select all that apply, considering your life over the next 2 months.","I don’t exercise often
+Indoors
+Outdoors
+Swimming Pool
+Ocean
+I work out, but not in these spaces","Everybody
+
+Multi-select but can only select in these groups (i.e., single group select)
+
+Group 1; Don't excersise often
+Group 2: Indoors, Outdoors, Pool, Ocean
+Group 3: I work out, but not in these spacesE",,Why we ask,text,"Sweating affects your hair a lot (as you've no doubt experienced), as does the environment that happens in. This gives us insight into both.",Lifestyle & Environment,low,/
+HC,,my-lifestyle/zipcode,C28 HC Zip Code - View,zipcode,Any specific ingredient preferences? ,Where will you be spending most of your time in the next 2 months? ," For now, we only ship to the US. 
+
+Your location tells us what environmental stressors your hair needs to be shielded from on a daily basis. We’ll also update your formulas throughout the year to reflect the actual weather conditions in your area.",Zip Code,Everyone,,/,/,/,Lifestyle & Environment,medium,"Silicone helps with hair detangling, softness, and smoothness. We use a professional, high-quality silicone that won’t leave any residue on your scalp or strands. Silicone is commonly found in hair care products. If you haven’t tried silicone-free products before, it may take a few weeks to get used to as it will give your hair a more natural touch/hair feeling."
+HC,,my-lifestyle/geo-aggressors,C29 HC Geo Aggressors - View,geo-aggressors,What fragrance would you like?,Here’s what affects your hair in [[LOCATION]],We'll tailor your custom formulas to combact these environmental stressors — for great hair regardless of the weather.,,Everyone,,,,/,Lifestyle & Environment,,2-3 Descriptions from customers for each fragrance ( @erin)
+All,for everyone without an account or not yet logged in,signin,C27 HC Sign Up/In - View,,Any specific ingredient preferences? ,Almost done. let's save your results to move forward.,"We'll use your email address to save your answers.
+
+","First Name
+Last Name
+Email Address","Everyone
+
+[promo heuristic Decision Pt #1 - what signal can we get here for presenting promo]",,,,By clicking 'NEXT' I acknowledge I have read and agree to the Prose End User License and Terms of Service and Privacy Policy,Profile,,
+,,,C30 HC Preferences Intro - View,,,,,,Everyone,,,,,,,
+Supp Updates,,my-preferences/exceptions,C31 HC Exceptions - View,exceptions,,Any specific haircare ingredient preferences? ,"All Prose products are already free of parabens, mineral oils, gluten, sulfates, dyes, GMOs, and animal cruelty.
+
+Select all that apply","Vegan
+Silicone-free
+No thanks
+","Everyone
+Multi {vegan or Silicone free} or [no thanks}",,What is silicone again?,text,"Silicone helps with hair detangling, softness, and smoothness. We use a professional, high-quality silicone that won’t leave any residue on your scalp or strands. Silicone is commonly found in hair care products. If you haven’t tried silicone-free products before, it may take a few weeks to get used to as it will give your hair a more natural touch/hair feeling.",Preferences,medium,
+Supp Updates,,my-preferences/fragrance,C32 HC Fragrances - View,fragrance,,What haircare fragrance would you like?, Please note that not all your products will feature this scent: some are intentionally fragrance-free or lightly scented with essential oil for sensitivity reasons.,,Everyone - Single,,Need help deciding?,text and descriptive boxes for each fragrance,2-3 Descriptions from customers for each fragrance ( @erin),Preferences,,
+Supp Updates,,my-goals/goals,C33 HC Goals - View,goals,,What are you hair goals?,Select all that apply,"More volume
+
+More shine
+
+More smoothness
+
+(More curl definition) type2&3&4
+
+(More moisture) type3&4
+
+(Less brass* ) 
+color_treatment = bleach and/or permanent 
+or grey_hair = full or half 
++ returning customers
+
+More hair growth**
+
+Less hair shedding**
+
+
+
+*This benefit is only available in the conditioner, which will be tinted light purple
+** This benefit is only available from hair supplements ","Everyone
+
+But the options are a function of previous answers of type  dependent- curl/moisture and less brass C13/C15.2 dependent
+
+the * only represents what disclaimer is shown on site. everyone can see these options",,Not sure? Tap for a tip,text,"More volume
+If hair feels limp or flat
+
+More shine
+If hair looks dull or one-dimensional
+
+More smoothness
+To fight frizz and flyaways
+
+More curl definition
+If you want your curls to hold their shape better
+
+More moisture
+If hair feels dry, thirsty, or brittle
+
+Less brass
+To neutralize warm tones on blonde, white, or grey hair
+
+Less hair shedding
+If you notice you are shedding more hair than usual
+
+More hair growth 
+If you feel your hair is thining or prone to breakage",Preferences,medium,
+,,,C34 HC Get Results Loading - View,,,,,,,,,,,,,
+HC,,results/scoring,C35 HC Results Scoring - View,scoring,,"Your results are in!
+",Here’s a breakdown of where your hair and scalp fall over 5 vital spectra. These results tell us exactly how much support you need in which areas--your custom formulas will be tailored to these measurements.,"Sensitivity 100/100
+Sebum 100/100
+Dandruff 100/100
+Dryness 100/100
+Damage 100/100",Everyone,,,,,Results,,
+HC,,results/ingredients,C36 HC Results Ingredients - View,ingredients,,"Your star ingredients
+","Based on your analysis, these are some of the natural active ingredients we’ve selected to match your precise needs. These will be the star players in your haircare lineup.
+
+
+","Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects
+Benefit, Ingredient Name, Effects",Everyone,,,,,Results,,

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./globals.css";
+
+body {
+  background-color: #f9f7f2;
+  color: #161714;
+  font-family: "Simplon Norm", sans-serif;
+}
