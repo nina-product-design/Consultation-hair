@@ -913,7 +913,7 @@ export default function ConsultationPage() {
             letterSpacing: typography.styles.body1Medium.letterSpacing,
           }}
         >
-          Please return to user testing
+          Please return to usertesting
         </span>
       </div>
     );
