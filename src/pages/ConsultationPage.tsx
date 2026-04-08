@@ -980,7 +980,7 @@ export default function ConsultationPage() {
       {/* Tip bottom sheet */}
       {showTip && (
         <TipBottomSheet
-          title={isQuestion && screen.tipTitle ? screen.tipTitle : "Why we ask"}
+          title={(isQuestion && screen.tipTitle ? screen.tipTitle : "Why we ask").replace(/\s*Tap\b.*/i, "").replace(/\?$/, "")}
           onClose={() => setShowTip(false)}
         />
       )}
