@@ -898,6 +898,26 @@ export default function ConsultationPage() {
 
   // Show NEXT for multi-select questions and all placeholders
   const showNextButton = !isQuestion || isMulti;
+  const isEnd = screen.type === "placeholder" && screen.slug === "end";
+
+  if (isEnd) {
+    return (
+      <div className="min-h-dvh bg-(--color-neutral-100) flex items-center justify-center max-w-[430px] mx-auto w-full">
+        <span
+          className="text-(--color-neutral-900) text-center"
+          style={{
+            fontFamily: typography.styles.body1Medium.fontFamily,
+            fontSize: typography.styles.body1Medium.fontSize,
+            fontWeight: typography.styles.body1Medium.fontWeight,
+            lineHeight: typography.styles.body1Medium.lineHeight,
+            letterSpacing: typography.styles.body1Medium.letterSpacing,
+          }}
+        >
+          Please return to user testing
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-dvh bg-(--color-neutral-200) flex flex-col max-w-[430px] mx-auto w-full">

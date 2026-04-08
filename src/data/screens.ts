@@ -774,4 +774,11 @@ export const screens: Screen[] = [
       { label: "Less hair shedding" },
     ],
   },
+
+  {
+    type: "placeholder",
+    slug: "end",
+    category: "preferences",
+    title: "end",
+  },
 ];
