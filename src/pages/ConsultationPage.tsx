@@ -346,7 +346,7 @@ function SigninScreen() {
         <div className="border-t border-(--color-neutral-400) mt-(--spacing-spacing-24) pt-(--spacing-spacing-24)">
           <div className="flex items-center gap-(--spacing-spacing-16)">
             <span className="text-(--color-neutral-900) shrink-0" style={h3Style}>
-              0%
+              91%
             </span>
             <span className="text-(--color-neutral-800)" style={body3Style}>
               said Prose addressed{" "}
@@ -359,7 +359,7 @@ function SigninScreen() {
         <div className="border-t border-(--color-neutral-400) mt-(--spacing-spacing-24) pt-(--spacing-spacing-24)">
           <div className="flex items-center gap-(--spacing-spacing-16)">
             <span className="text-(--color-neutral-900) shrink-0" style={h3Style}>
-              0x
+              3x
             </span>
             <span className="text-(--color-neutral-800)" style={body3Style}>
               <span className="bg-(--color-highlight-200)">stronger hair</span> and less breakage**
@@ -751,7 +751,8 @@ function QuestionContent({
 // ── Main page ────────────────────────────────────────────────────────────────
 
 export default function ConsultationPage() {
-  const [step, setStep] = useState(0);
+  const initialStep = Number(new URLSearchParams(window.location.search).get("step") || 0);
+  const [step, setStep] = useState(initialStep);
   const [answers, setAnswers] = useState<Record<string, Set<number>>>({});
 
   const screen = screens[step];
