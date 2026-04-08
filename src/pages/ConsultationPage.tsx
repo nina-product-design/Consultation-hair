@@ -11,6 +11,8 @@ import {
   type Category,
 } from "../data/screens";
 
+const BASE = import.meta.env.BASE_URL;
+
 // ── Progress bar ─────────────────────────────────────────────────────────────
 
 function ProgressBar({
@@ -107,7 +109,7 @@ function LifestyleIntro() {
         <span className="bg-(--color-highlight-200)">185+ clean ingredients.</span>
       </p>
       <img
-        src="/images/RTB2.png"
+        src={`${BASE}images/RTB2.png`}
         alt=""
         className="mt-(--spacing-spacing-32) w-full rounded-[10px]"
       />
@@ -329,7 +331,7 @@ function SigninScreen() {
     <div className="flex-1 flex flex-col pb-(--spacing-spacing-80) overflow-y-auto">
       {/* Hero image */}
       <img
-        src="/images/RTB4A.png"
+        src={`${BASE}images/RTB4A.png`}
         alt=""
         className="w-full object-cover"
       />
@@ -378,15 +380,15 @@ function SigninScreen() {
 }
 
 const RECOMMENDED_FRAGRANCES = [
-  { name: "Corsica", category: "Fresh + Aquatic", notes: "Anjou Pear, Peony, Cedar Wood", image: "/images/fragrances/Prose-Hair-Fragrance-Corsica.png" },
-  { name: "Prelude", category: "Floral + Fresh", notes: "Rose, Geranium, Blue Iris", image: "/images/fragrances/Prose-Hair-Fragrance-Prelude.png" },
-  { name: "Meleni", category: "Fruity + Tropical", notes: "Mango, Melon, Lush Greens", image: "/images/fragrances/Prose-Hair-Fragrance-Meleni.png" },
+  { name: "Corsica", category: "Fresh + Aquatic", notes: "Anjou Pear, Peony, Cedar Wood", image: `${BASE}images/fragrances/Prose-Hair-Fragrance-Corsica.png` },
+  { name: "Prelude", category: "Floral + Fresh", notes: "Rose, Geranium, Blue Iris", image: `${BASE}images/fragrances/Prose-Hair-Fragrance-Prelude.png` },
+  { name: "Meleni", category: "Fruity + Tropical", notes: "Mango, Melon, Lush Greens", image: `${BASE}images/fragrances/Prose-Hair-Fragrance-Meleni.png` },
 ];
 
 const OTHER_FRAGRANCES = [
-  { name: "Oasis", category: "Floral + Summery", notes: "Jasmine, Amber, White Peach", image: "/images/fragrances/Prose-Hair-Fragrance_Oasis.png" },
-  { name: "Botanica", category: "Herbal + Aromatic", notes: "Eucalyptus, Rosemary, Lavender", image: "/images/fragrances/Prose-Hair-Fragrance-Botanica.png" },
-  { name: "Arcadia", category: "Citrusy + Woody", notes: "Grapefruit, Basil, Cedar", image: "/images/fragrances/Prose-Hair-Fragrance-Arcadia.png" },
+  { name: "Oasis", category: "Floral + Summery", notes: "Jasmine, Amber, White Peach", image: `${BASE}images/fragrances/Prose-Hair-Fragrance_Oasis.png` },
+  { name: "Botanica", category: "Herbal + Aromatic", notes: "Eucalyptus, Rosemary, Lavender", image: `${BASE}images/fragrances/Prose-Hair-Fragrance-Botanica.png` },
+  { name: "Arcadia", category: "Citrusy + Woody", notes: "Grapefruit, Basil, Cedar", image: `${BASE}images/fragrances/Prose-Hair-Fragrance-Arcadia.png` },
   { name: "Fragrance-Free", category: "", notes: "", image: "" },
 ];
 
@@ -854,7 +856,7 @@ export default function ConsultationPage() {
       )}
 
       {/* Bottom navigation — floats over content */}
-      <footer className="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto px-(--spacing-spacing-24) py-(--spacing-spacing-16) flex items-center gap-(--spacing-spacing-12) pointer-events-none">
+      <footer className="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto px-(--spacing-spacing-24) py-(--spacing-spacing-16) flex items-center gap-(--spacing-spacing-12) pointer-events-none box-border">
         {!isFirst && (
           <ButtonMini
             variant="back"
@@ -868,7 +870,7 @@ export default function ConsultationPage() {
           <Button
             variant="primary-light"
             size="flexible"
-            className="flex-1 pointer-events-auto"
+            className="flex-1 min-w-0 !max-w-none pointer-events-auto"
             onClick={goNext}
             disabled={isMulti && selected.size === 0}
           >
