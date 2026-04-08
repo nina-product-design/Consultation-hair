@@ -33,7 +33,7 @@ function ProgressBar({
         return (
           <div key={cat.key} className="flex-1 flex flex-col items-center">
             <span
-              className={`pb-(--spacing-spacing-12) ${
+              className={`pb-(--spacing-spacing-4) ${
                 isPast || isCurrent
                   ? "text-(--color-neutral-900)"
                   : "text-(--color-neutral-700)"
@@ -392,7 +392,7 @@ const OTHER_FRAGRANCES = [
   { name: "Fragrance-Free", category: "", notes: "", image: "" },
 ];
 
-function FragranceScreen() {
+function FragranceScreen({ onTipOpen }: { onTipOpen: () => void }) {
   const [selectedFragrance, setSelectedFragrance] = useState<string | null>(null);
 
   return (
@@ -423,10 +423,12 @@ function FragranceScreen() {
         Please note that some of your custom products may feature a unique scent, tailored to the formulation.
       </p>
 
-      <button className="flex items-center gap-(--spacing-spacing-8) mt-(--spacing-spacing-24) cursor-pointer bg-transparent border-none">
-        <span className="text-(--color-tertiary-300) flex items-center justify-center w-[20px] h-[20px] rounded-full border border-(--color-tertiary-300) text-xs leading-none">
-          +
-        </span>
+      <button className="flex items-center gap-(--spacing-spacing-8) mt-(--spacing-spacing-24) cursor-pointer bg-transparent border-none" onClick={onTipOpen}>
+        <svg width="14" height="14" viewBox="0 0 12.25 12.25" fill="none" className="shrink-0">
+          <circle cx="6.125" cy="6.125" r="6.125" fill="var(--color-tertiary-200)" />
+          <path d="M6.125 3.5L6.125 8.75" stroke="var(--color-neutral-800)" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M3.504 6.129L8.754 6.129" stroke="var(--color-neutral-800)" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
         <span
           className="text-(--color-neutral-800) underline"
           style={{
@@ -568,7 +570,7 @@ function PlaceholderContent({ screen }: { screen: PlaceholderScreen }) {
   }
 
   if (screen.slug === "fragrance") {
-    return <FragranceScreen />;
+    return <FragranceScreen onTipOpen={() => setShowTip(true)} />;
   }
 
   return (
@@ -623,10 +625,12 @@ function QuestionContent({
   screen,
   selected,
   onSelect,
+  onTipOpen,
 }: {
   screen: QuestionScreen;
   selected: Set<number>;
   onSelect: (index: number) => void;
+  onTipOpen: () => void;
 }) {
   let lastGroup: string | undefined;
   const isHug = screen.selectorSize === "hug";
@@ -662,10 +666,12 @@ function QuestionContent({
       )}
 
       {screen.tipTitle && (
-        <button className="flex items-center gap-(--spacing-spacing-8) mt-(--spacing-spacing-24) cursor-pointer bg-transparent border-none">
-          <span className="text-(--color-tertiary-300) flex items-center justify-center w-[20px] h-[20px] rounded-full border border-(--color-tertiary-300) text-xs leading-none">
-            +
-          </span>
+        <button className="flex items-center gap-(--spacing-spacing-8) mt-(--spacing-spacing-24) cursor-pointer bg-transparent border-none" onClick={onTipOpen}>
+          <svg width="14" height="14" viewBox="0 0 12.25 12.25" fill="none" className="shrink-0">
+            <circle cx="6.125" cy="6.125" r="6.125" fill="var(--color-tertiary-200)" />
+            <path d="M6.125 3.5L6.125 8.75" stroke="var(--color-neutral-800)" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M3.504 6.129L8.754 6.129" stroke="var(--color-neutral-800)" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
           <span
             className="text-(--color-neutral-800) underline"
             style={{
@@ -748,6 +754,81 @@ function QuestionContent({
   );
 }
 
+// ── Tip bottom sheet ─────────────────────────────────────────────────────────
+
+function TipBottomSheet({
+  title,
+  onClose,
+}: {
+  title: string;
+  onClose: () => void;
+}) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    requestAnimationFrame(() => setVisible(true));
+  }, []);
+
+  const handleClose = () => {
+    setVisible(false);
+    setTimeout(onClose, 300);
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center"
+      onClick={handleClose}
+    >
+      {/* Overlay */}
+      <div
+        className={`absolute inset-0 bg-[rgba(0,0,0,0.3)] transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"}`}
+      />
+
+      {/* Sheet */}
+      <div
+        className={`relative max-w-[430px] w-full transition-transform duration-300 ease-out ${visible ? "translate-y-0" : "translate-y-full"}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="bg-(--color-tertiary-200) rounded-t-[20px] pt-(--spacing-spacing-12) pb-(--spacing-spacing-24) px-(--spacing-spacing-24) flex flex-col items-center gap-(--spacing-spacing-24)">
+          {/* Drag handle */}
+          <div className="w-[42px] h-[5px] rounded-[5px] bg-(--color-tertiary-300)" />
+
+          {/* Content */}
+          <div className="flex flex-col items-center gap-(--spacing-spacing-24) w-full">
+            {/* Title */}
+            <span
+              className="text-(--color-neutral-900) text-center uppercase w-full"
+              style={{
+                fontFamily: typography.styles.label2Regular.fontFamily,
+                fontSize: typography.styles.label2Regular.fontSize,
+                fontWeight: typography.styles.label2Regular.fontWeight,
+                lineHeight: typography.styles.label2Regular.lineHeight,
+                letterSpacing: typography.styles.label2Regular.letterSpacing,
+              }}
+            >
+              {title}:
+            </span>
+
+            {/* Body */}
+            <p
+              className="text-(--color-neutral-900) text-center w-full"
+              style={{
+                fontFamily: typography.styles.body4Regular.fontFamily,
+                fontSize: typography.styles.body4Regular.fontSize,
+                fontWeight: typography.styles.body4Regular.fontWeight,
+                lineHeight: typography.styles.body4Regular.lineHeight,
+                letterSpacing: typography.styles.body4Regular.letterSpacing,
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main page ────────────────────────────────────────────────────────────────
 
 export default function ConsultationPage() {
@@ -756,6 +837,7 @@ export default function ConsultationPage() {
   const [answers, setAnswers] = useState<Record<string, Set<number>>>({});
   const [showPopup, setShowPopup] = useState(false);
   const [popupDismissed, setPopupDismissed] = useState(false);
+  const [showTip, setShowTip] = useState(false);
 
   useEffect(() => {
     if (step === 0 && !popupDismissed) {
@@ -867,6 +949,7 @@ export default function ConsultationPage() {
           screen={screen}
           selected={selected}
           onSelect={handleSelect}
+          onTipOpen={() => setShowTip(true)}
         />
       )}
 
@@ -893,6 +976,14 @@ export default function ConsultationPage() {
           </Button>
         )}
       </footer>
+
+      {/* Tip bottom sheet */}
+      {showTip && (
+        <TipBottomSheet
+          title={isQuestion && screen.tipTitle ? screen.tipTitle : "Why we ask"}
+          onClose={() => setShowTip(false)}
+        />
+      )}
 
       {/* Welcome popup */}
       {showPopup && (
