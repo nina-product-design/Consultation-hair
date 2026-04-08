@@ -754,6 +754,20 @@ export default function ConsultationPage() {
   const initialStep = Number(new URLSearchParams(window.location.search).get("step") || 0);
   const [step, setStep] = useState(initialStep);
   const [answers, setAnswers] = useState<Record<string, Set<number>>>({});
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupDismissed, setPopupDismissed] = useState(false);
+
+  useEffect(() => {
+    if (step === 0 && !popupDismissed) {
+      const timer = setTimeout(() => setShowPopup(true), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [step, popupDismissed]);
+
+  const dismissPopup = () => {
+    setShowPopup(false);
+    setPopupDismissed(true);
+  };
 
   const screen = screens[step];
   const isFirst = step === 0;
@@ -879,6 +893,129 @@ export default function ConsultationPage() {
           </Button>
         )}
       </footer>
+
+      {/* Welcome popup */}
+      {showPopup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(0,0,0,0.4)]"
+          onClick={dismissPopup}
+        >
+          <div
+            className="relative w-[340px] rounded-[10px] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={dismissPopup}
+              className="absolute top-(--spacing-spacing-12) right-(--spacing-spacing-12) w-[32px] h-[32px] rounded-full bg-(--color-neutral-100) flex items-center justify-center cursor-pointer border-none z-10"
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M1 1L11 11M11 1L1 11" stroke="#323429" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+
+            {/* Promo badge */}
+            <div className="absolute top-(--spacing-spacing-12) left-(--spacing-spacing-12) w-[86px] h-[86px] rounded-full bg-(--color-highlight-200) flex flex-col items-center justify-center z-10">
+              <span
+                className="text-(--color-primary-400) text-center uppercase"
+                style={{
+                  fontFamily: typography.label2Medium.fontFamily,
+                  fontSize: "20px",
+                  fontWeight: typography.label2Medium.fontWeight,
+                  lineHeight: "1.2",
+                }}
+              >
+                60%<br />off
+              </span>
+            </div>
+
+            {/* Hero image */}
+            <div className="w-full h-[214px] relative overflow-hidden">
+              <img
+                src={`${BASE}images/popup-hero.png`}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Copy section */}
+            <div className="bg-(--color-neutral-200) flex flex-col items-center px-(--spacing-spacing-24) py-(--spacing-spacing-48) gap-(--spacing-spacing-24)">
+              {/* Eyebrow */}
+              <div className="relative flex items-center justify-center w-full">
+                <span
+                  className="text-(--color-primary-400) text-center relative z-10"
+                  style={{
+                    fontFamily: typography.styles.label2Regular.fontFamily,
+                    fontSize: typography.styles.label2Regular.fontSize,
+                    fontWeight: typography.styles.label2Regular.fontWeight,
+                    lineHeight: typography.styles.label2Regular.lineHeight,
+                    letterSpacing: typography.styles.label2Regular.letterSpacing,
+                    textTransform: "uppercase" as const,
+                  }}
+                >
+                  <span className="relative">
+                    First Order Exclusive
+                    <span className="absolute bottom-0 left-0 right-0 h-[10px] bg-(--color-highlight-200) -z-10" />
+                  </span>
+                </span>
+              </div>
+
+              {/* Headline */}
+              <h3
+                className="text-center text-(--color-neutral-900)"
+                style={{
+                  fontFamily: typography.styles.h3.fontFamily,
+                  fontSize: typography.styles.h3.fontSize,
+                  fontWeight: typography.styles.h3.fontWeight,
+                  lineHeight: typography.styles.h3.lineHeight,
+                  letterSpacing: typography.styles.h3.letterSpacing,
+                }}
+              >
+                Get 60% off + a free Toiletry Bag ($30 value!)
+              </h3>
+
+              {/* Body copy */}
+              <p
+                className="text-center text-(--color-primary-400)"
+                style={{
+                  fontFamily: typography.styles.body4Regular.fontFamily,
+                  fontSize: typography.styles.body4Regular.fontSize,
+                  fontWeight: typography.styles.body4Regular.fontWeight,
+                  lineHeight: typography.styles.body4Regular.lineHeight,
+                  letterSpacing: typography.styles.body4Regular.letterSpacing,
+                }}
+              >
+                Subscribe to any 3+ haircare products to unlock your{" "}
+                <span style={{ fontWeight: 500 }}>exclusive welcome offer</span>.* Limited time only!
+              </p>
+
+              {/* CTA */}
+              <Button
+                variant="primary-light"
+                size="flexible"
+                className="w-full !max-w-none !min-w-0"
+                onClick={dismissPopup}
+              >
+                Unlock Offer
+              </Button>
+
+              {/* Fine print */}
+              <p
+                className="text-center text-(--color-neutral-800)"
+                style={{
+                  fontFamily: typography.styles.body6Regular.fontFamily,
+                  fontSize: typography.styles.body6Regular.fontSize,
+                  fontWeight: typography.styles.body6Regular.fontWeight,
+                  lineHeight: typography.styles.body6Regular.lineHeight,
+                  letterSpacing: typography.styles.body6Regular.letterSpacing,
+                }}
+              >
+                See the full promotion terms and conditions <span className="underline">here</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
