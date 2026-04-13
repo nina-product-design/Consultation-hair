@@ -4,6 +4,7 @@ export type Option = {
   label: string;
   subcopy?: string;
   group?: string;
+  image?: string;
 };
 
 export type QuestionScreen = {
@@ -70,25 +71,16 @@ export const screens: Screen[] = [
     tipTitle: "More of a visual learner? Tap for pics",
     selectionType: "single",
     options: [
-      { label: "Type 1 - Straight" },
-      {
-        label: "Type 2A - Soft Waves",
-        subcopy: "Almost straight with a slight bend",
-      },
-      { label: "Type 2B - Wavy", subcopy: "Loose, S-shaped waves" },
-      {
-        label: "Type 2C - Deep Waves or Loose Curls",
-        subcopy: "Defined, S-shaped pattern",
-      },
-      { label: "Type 3A - Curly", subcopy: 'Like a loose "C"' },
-      { label: "Type 3B - Very Curly", subcopy: "Defined & springy C's" },
-      { label: "Type 3C - Tight Curls", subcopy: "Like a corkscrew" },
-      { label: "Type 4A - Coily", subcopy: "Tight & springy, like a slinky" },
-      {
-        label: "Type 4B - Zig-Zag Coils",
-        subcopy: 'Like a sharply defined "Z"',
-      },
-      { label: "Type 4C - Tight Zig-Zag", subcopy: 'A less-defined "Z"' },
+      { label: "Type 1 - Straight", image: "images/hair%20types/1.png" },
+      { label: "Type 2A - Soft Waves", subcopy: "Almost straight with a slight bend", image: "images/hair%20types/2a.png" },
+      { label: "Type 2B - Wavy", subcopy: "Loose, S-shaped waves", image: "images/hair%20types/2b.png" },
+      { label: "Type 2C - Deep Waves or Loose Curls", subcopy: "Defined, S-shaped pattern", image: "images/hair%20types/2c.png" },
+      { label: "Type 3A - Curly", subcopy: 'Like a loose "C"', image: "images/hair%20types/3a.png" },
+      { label: "Type 3B - Very Curly", subcopy: "Defined & springy C's", image: "images/hair%20types/3b.png" },
+      { label: "Type 3C - Tight Curls", subcopy: "Like a corkscrew", image: "images/hair%20types/3c.png" },
+      { label: "Type 4A - Coily", subcopy: "Tight & springy, like a slinky", image: "images/hair%20types/4a.png" },
+      { label: "Type 4B - Zig-Zag Coils", subcopy: 'Like a sharply defined "Z"', image: "images/hair%20types/4b.png" },
+      { label: "Type 4C - Tight Zig-Zag", subcopy: 'A less-defined "Z"', image: "images/hair%20types/4c.png" },
     ],
   },
 
@@ -334,75 +326,6 @@ export const screens: Screen[] = [
 
   {
     type: "question",
-    slug: "color-treatments-location",
-    category: "treatments",
-    heading: "How much of your hair is color-treated?",
-    instruction: "If you're not sure, select all that apply.",
-    selectionType: "single",
-    options: [
-      {
-        label: "All or nearly all",
-        subcopy: "Choose all even if you have small visible roots",
-      },
-      {
-        label: "Only parts",
-        subcopy: "I.e. ombre, balayage, highlights",
-      },
-      { label: "Just the tips", subcopy: "Nearly grown-out ends" },
-    ],
-  },
-
-  {
-    type: "question",
-    slug: "color-treatments-type",
-    category: "treatments",
-    heading: "What kind of color do you get?",
-    instruction:
-      "This helps us prevent and treat specific kinds of color-related damage. Select all that apply.",
-    tipTitle: "Not sure what you got?",
-    selectionType: "multi",
-    options: [
-      {
-        label: "Bleach",
-        subcopy:
-          "Your hair got lighter, e.g. ombre, balayage, highlights, double process",
-      },
-      {
-        label: "Permanent color",
-        subcopy:
-          "Your hair either got darker, or slightly lighter e.g. grey coverage, lowlights, all-over color",
-      },
-      {
-        label: "Temporary color",
-        subcopy:
-          "Your hair got toned or glossed, then eventually washed out",
-      },
-      {
-        label: "Other",
-        subcopy:
-          "You used henna powder or hair-makeup that washes out",
-      },
-    ],
-  },
-
-  {
-    type: "question",
-    slug: "color-treatments-cadence",
-    category: "treatments",
-    heading: "How often do you color-treat your hair?",
-    instruction:
-      "We're more interested in bleach & permanent color here, not the temporary stuff.",
-    selectionType: "single",
-    options: [
-      { label: "Every month" },
-      { label: "Every 2 or 3 months" },
-      { label: "A couple times a year" },
-      { label: "I just started" },
-    ],
-  },
-
-  {
-    type: "question",
     slug: "other-treatments",
     category: "treatments",
     heading: "Has your hair undergone any textural treatments?",
@@ -426,21 +349,6 @@ export const screens: Screen[] = [
     ],
   },
 
-  {
-    type: "question",
-    slug: "other-treatments-cadence",
-    category: "treatments",
-    heading: "How often do you receive textural treatments?",
-    instruction:
-      "If you've stopped getting regular treatments, answer with your former frequency.",
-    selectionType: "single",
-    options: [
-      { label: "Every month" },
-      { label: "Every 2 or 3 months" },
-      { label: "A couple times a year" },
-      { label: "I just started" },
-    ],
-  },
 
   {
     type: "question",

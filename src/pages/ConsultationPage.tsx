@@ -117,8 +117,7 @@ function LifestyleIntro() {
   );
 }
 
-function ZipcodeScreen() {
-  const [zipcode, setZipcode] = useState("");
+function ZipcodeScreen({ zipcode, setZipcode }: { zipcode: string; setZipcode: (v: string) => void }) {
 
   return (
     <div className="flex-1 flex flex-col items-center px-(--spacing-spacing-24) pt-(--spacing-spacing-48) pb-(--spacing-spacing-80) overflow-y-auto">
@@ -261,7 +260,7 @@ function GeoProgressBar({ label, value, delay }: { label: string; value: number;
   );
 }
 
-function GeoAggressorsScreen() {
+function GeoAggressorsScreen({ location }: { location: string }) {
   return (
     <div className="flex-1 flex flex-col items-center px-(--spacing-spacing-24) pt-(--spacing-spacing-32) pb-(--spacing-spacing-80) overflow-y-auto">
       <h2
@@ -274,7 +273,7 @@ function GeoAggressorsScreen() {
           letterSpacing: typography.styles.h4.letterSpacing,
         }}
       >
-        Here's what affects your hair in Brooklyn.
+        Here's what affects your hair in {location}.
       </h2>
 
       <p
@@ -549,30 +548,6 @@ function FragranceScreen({ onTipOpen }: { onTipOpen: () => void }) {
 }
 
 function PlaceholderContent({ screen }: { screen: PlaceholderScreen }) {
-  if (screen.slug === "treatments-intro") {
-    return <TreatmentsIntro />;
-  }
-
-  if (screen.slug === "lifestyle-intro") {
-    return <LifestyleIntro />;
-  }
-
-  if (screen.slug === "zipcode") {
-    return <ZipcodeScreen />;
-  }
-
-  if (screen.slug === "geo-aggressors") {
-    return <GeoAggressorsScreen />;
-  }
-
-  if (screen.slug === "signin") {
-    return <SigninScreen />;
-  }
-
-  if (screen.slug === "fragrance") {
-    return <FragranceScreen onTipOpen={() => setShowTip(true)} />;
-  }
-
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-(--spacing-spacing-24) pb-(--spacing-spacing-80) text-center">
       <h2
@@ -741,9 +716,10 @@ function QuestionContent({
               <Selector
                 label={opt.label}
                 subcopy={opt.subcopy}
+                image={opt.image ? `${BASE}${opt.image}` : undefined}
                 selected={selected.has(i)}
                 onClick={() => onSelect(i)}
-                size="hug"
+                size={opt.image ? "mobile" : "hug"}
                 className="w-full"
               />
             </div>
@@ -838,6 +814,25 @@ export default function ConsultationPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupDismissed, setPopupDismissed] = useState(false);
   const [showTip, setShowTip] = useState(false);
+  const [zipcode, setZipcode] = useState("");
+  const [cityName, setCityName] = useState("");
+
+  useEffect(() => {
+    if (zipcode.length === 5) {
+      fetch(`https://api.zippopotam.us/us/${zipcode}`)
+        .then((r) => r.ok ? r.json() : null)
+        .then((data) => {
+          if (data?.places?.[0]) {
+            setCityName(data.places[0]["place name"]);
+          } else {
+            setCityName("");
+          }
+        })
+        .catch(() => setCityName(""));
+    } else {
+      setCityName("");
+    }
+  }, [zipcode]);
 
   useEffect(() => {
     if (step === 0 && !popupDismissed) {
@@ -962,7 +957,19 @@ export default function ConsultationPage() {
       />
 
       {/* Content */}
-      {screen.type === "placeholder" ? (
+      {screen.type === "placeholder" && screen.slug === "treatments-intro" ? (
+        <TreatmentsIntro />
+      ) : screen.type === "placeholder" && screen.slug === "lifestyle-intro" ? (
+        <LifestyleIntro />
+      ) : screen.type === "placeholder" && screen.slug === "zipcode" ? (
+        <ZipcodeScreen zipcode={zipcode} setZipcode={setZipcode} />
+      ) : screen.type === "placeholder" && screen.slug === "geo-aggressors" ? (
+        <GeoAggressorsScreen location={cityName || zipcode || "your area"} />
+      ) : screen.type === "placeholder" && screen.slug === "signin" ? (
+        <SigninScreen />
+      ) : screen.type === "placeholder" && screen.slug === "fragrance" ? (
+        <FragranceScreen onTipOpen={() => setShowTip(true)} />
+      ) : screen.type === "placeholder" ? (
         <PlaceholderContent screen={screen} />
       ) : (
         <QuestionContent
