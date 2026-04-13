@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Logo } from "../components/Logo";
 import { Selector } from "../components/Selector";
 import { Button, ButtonMini } from "../components/Button";
@@ -668,7 +668,7 @@ function QuestionContent({
           lastGroup = opt.group;
 
           return isHug ? (
-            <div key={i} className="flex flex-wrap gap-(--spacing-spacing-8) items-start">
+            <React.Fragment key={i}>
               {showGroupHeader && (
                 <div
                   className="w-full mt-(--spacing-spacing-12) mb-(--spacing-spacing-4)"
@@ -693,7 +693,7 @@ function QuestionContent({
                 onClick={() => onSelect(i)}
                 size="hug"
               />
-            </div>
+            </React.Fragment>
           ) : (
             <div key={i} className="w-full flex flex-col items-center">
               {showGroupHeader && (
